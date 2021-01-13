@@ -1,0 +1,1 @@
+nixos-unstable https://nixos.org/channels/nixos-unstable 257cbbcd3ab7bd96f5d24d50adc807de7c82e06d
