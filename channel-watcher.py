@@ -2,6 +2,7 @@
 
 from os import listdir, path
 from subprocess import run
+from time import time
 from typing import Dict, Tuple
 from urllib.request import urlopen
 
@@ -25,7 +26,7 @@ def save_channels(channels: Dict[str, Tuple[str, str]], filename: str) -> None:
 
 
 def get_channel_rev(channel_url: str) -> str:
-    with urlopen(f"{channel_url}/git-revision") as file:
+    with urlopen(f"{channel_url}/git-revision?{int(time())}") as file:
         return file.read().decode().strip()
 
 
